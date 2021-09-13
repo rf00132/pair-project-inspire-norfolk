@@ -1,2 +1,109 @@
+//scss variables
 $main-purple: #584096;
 $accent-black: #23224b;
+
+//header styles
+
+#header{
+    background: white;
+    width:95vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: sans-serif;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.header-logo-div{
+    img{
+        width: 130px;
+    }
+}
+
+.header-main-content{
+    display: flex;
+    padding-top: 16px;
+}
+
+.header-page-nav{
+    padding-top:6px;
+    width: 550px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-phone-number{
+    background: $main-purple;
+    height: 14px;
+    width: 152px;
+    padding: 6px 0 14px;
+    border-radius: 3px;
+    a{
+        color: white;
+        height: 100%;
+        width: 100%;
+        margin-left: -6px;
+    }
+}
+
+.white-circle-bg{
+    background-color: white;
+    border-radius: 50%;
+    color: $main-purple;
+    padding: 4px 1px 4px 5px;
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.header-burger-button{
+    color:$main-purple;
+    font-size: 48px;
+    padding-top: 10px;
+    padding-right: 8px;
+}
+
+.header-page-nav,
+.header-phone-number{
+    display: none;
+}
+
+
+.header-phone-number,
+.header-page-nav{
+    a{
+        text-decoration: none;
+        padding: 3px 12px;
+    }
+}
+
+@media(min-width: 920px){
+    #header{
+        width: 870px;
+    }
+
+    .header-burger-button{
+        display: none;
+    }
+
+    .header-page-nav,
+    .header-phone-number{
+        display: flex;
+    }
+}
+
+
+@media(min-width: 1200px){
+    #header{
+        width: 1150px;
+    }
+
+    .header-page-nav{
+        width: 750px;
+    }
+}
+
+
+
+
