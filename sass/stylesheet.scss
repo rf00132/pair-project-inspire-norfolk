@@ -94,14 +94,15 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 
 
 .container{
-    padding: 40px 0;
-    
+    padding-top: 40px;
+    padding-bottom: 40px;
     &:nth-child(odd){
         background-color: $main-purple;
         color: white;
