@@ -3,7 +3,7 @@ body {
   font-family: "Urbanist", sans-serif;
   color: #23224b;
   overflow: hidden;
-  font-size: 1.2rem;
+  font-size: 1.2em;
 }
 
 #header .page-center {
@@ -111,6 +111,10 @@ body {
   font-weight: 600;
 }
 
+.text-container {
+  margin-bottom: 30px;
+}
+
 .card-container {
   display: flex;
   margin: -15px;
@@ -129,11 +133,14 @@ body {
 }
 .card img {
   width: 100%;
+  height: 45%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.card h4, .card p {
+.card h3, .card p {
   margin: 35px;
 }
-.card h4 {
+.card h3 {
   text-transform: uppercase;
   color: #584096;
 }
@@ -283,8 +290,23 @@ body {
   .card {
     flex-basis: 600px;
   }
+
+  .page-center {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (min-width: 920px) {
+  .banner .page-center {
+    width: 470px;
+    margin-right: auto;
+    margin-left: 50px;
+  }
+
+  .container:nth-child(odd) .page-center {
+    text-align: left;
+  }
+
   .page-center {
     width: 870px;
   }
@@ -293,8 +315,19 @@ body {
     flex-basis: 250px;
   }
 
+  .text-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .text-container h2 {
+    width: 200px;
+  }
+  .text-container p {
+    width: 640px;
+  }
+
   .card-container {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .header-burger-button {
@@ -311,6 +344,11 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .text-container p {
+    margin-left: 30px;
+    width: 950px;
+  }
+
   .page-center {
     width: 1150px;
   }
