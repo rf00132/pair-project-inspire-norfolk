@@ -94,17 +94,27 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    padding: 0 10px;
 }
 
 
 
 .container{
-
     padding: 40px 0;
+    
     &:nth-child(odd){
         background-color: $main-purple;
         color: white;
-        
+    }
+
+    &:nth-child(even){
+        background-color:white;
+        h3{
+            color:$main-purple;
+        }
+        p{
+            color: $accent-black;
+        }
     }
 }
 
@@ -125,16 +135,16 @@ body{
 
 .card-container{
     display: flex;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin: -15px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .card{
     background-color: white;
     flex-basis: 400px;
     text-align: center;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 15px;
     a {
         text-decoration: none;
     }
@@ -326,6 +336,11 @@ body{
             width: 500px;
         }
     } 
+
+    .card{
+        flex-basis: 600px;
+    }
+
 }
 
 @media(min-width: 920px){
@@ -333,6 +348,15 @@ body{
         width: 870px;
     }
 
+    .card{
+        flex-basis: 250px;
+    }
+
+    .card-container{
+        justify-content: center;
+    }
+
+    
     .header-burger-button{
         display: none;
     }
@@ -353,6 +377,10 @@ body{
 @media(min-width: 1200px){
     .page-center{
         width: 1150px;
+    }
+
+    .card{
+        flex-basis: 350px;
     }
 
     .header-page-nav{
