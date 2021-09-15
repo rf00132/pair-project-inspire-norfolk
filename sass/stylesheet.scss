@@ -95,8 +95,8 @@ body{
 }
 
 .container{
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+    padding: 40px 0;
     &:nth-child(odd){
         background-color: $main-purple;
         color: white;
@@ -273,7 +273,7 @@ body{
     overflow-x: hidden;
 }
 
-//account for page being expanded past a certain point
+//maybe account for page being expanded past a certain point
 //remove overlay, move sidemenu and container back to normal
 
 //sticky header styles
