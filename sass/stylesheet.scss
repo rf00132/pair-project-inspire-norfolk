@@ -8,7 +8,7 @@ body{
     font-family: 'Urbanist', sans-serif;
     color: $accent-black;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
 
 
@@ -97,7 +97,9 @@ body{
     padding: 0 10px;
 }
 
+p{
 
+}
 
 .container{
     padding: 40px 0;
@@ -150,11 +152,13 @@ body{
     }
     img{
         width: 100%;
+        height: 45%;
+        object-fit: cover;
     }
-    h4, p{
+    h3, p{
         margin: 35px;
     }
-    h4{
+    h3{
         text-transform: uppercase;
         color:$main-purple
     }
