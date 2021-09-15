@@ -2,15 +2,15 @@ body {
   margin: 0px;
   font-family: sans-serif;
   color: #23224b;
+  overflow: hidden;
 }
 
-#header {
-  background: white;
-  margin: 0 auto;
+#header .page-center {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 5px 0;
+  background: white;
 }
 
 .header-logo-div img {
@@ -187,6 +187,7 @@ body {
 #overlay {
   position: fixed;
   display: none;
+  top: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -196,6 +197,25 @@ body {
 
 #container {
   max-width: 100vw;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 5;
+  transition: top 0.4s ease-in-out 0.1s;
+  background: white;
+  width: calc(100vw - 17px);
+}
+
+.sticky-show {
+  top: 0;
+}
+
+.sticky-hide {
+  top: -100%;
 }
 
 @media (min-width: 650px) {
