@@ -84,7 +84,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.container:nth-child(odd) {
+.container:nth-child(n+2) {
   background-color: #584096;
   color: white;
 }
@@ -98,6 +98,20 @@ body {
   color: #23224b;
 }
 
+.banner {
+  color: white;
+  position: relative;
+}
+.banner .background {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url(../img/feature-img.8a1cc66.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
 .banner h1, .banner h2, .banner h3 {
   text-transform: uppercase;
 }
@@ -297,8 +311,33 @@ body {
   }
 }
 @media (min-width: 920px) {
+  .banner {
+    background-image: url(../img/feature-img.8a1cc66.jpg);
+    position: relative;
+    height: 483px;
+  }
+  .banner .content,
+.banner .white-border {
+    position: absolute;
+    width: 630px;
+    height: 523px;
+    margin-top: -40px;
+    padding-top: 40px;
+    -webkit-clip-path: polygon(0 0, 76% 0, 100% 51%, 75% 100%, 0 100%);
+            clip-path: polygon(0 0, 76% 0, 100% 51%, 75% 100%, 0 100%);
+  }
+  .banner .content {
+    background: #584096;
+    z-index: 1;
+  }
+  .banner .white-border {
+    background: white;
+    z-index: 0;
+    margin-left: 10px;
+  }
   .banner .page-center {
     width: 470px;
+    height: 483px;
     margin-right: auto;
     margin-left: 50px;
   }

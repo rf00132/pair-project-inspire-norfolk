@@ -101,7 +101,7 @@ body{
 .container{
     padding-top: 40px;
     padding-bottom: 40px;
-    &:nth-child(odd){
+    &:nth-child(n + 2){
         background-color: $main-purple;
         color: white;
     }
@@ -118,6 +118,21 @@ body{
 }
 
 .banner{
+    color: white;
+    position: relative;
+    .background{
+        background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url(../img/feature-img.8a1cc66.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    
     h1,h2,h3{
         text-transform: uppercase;
     }
@@ -355,11 +370,45 @@ body{
 
 @media(min-width: 920px){
 
-    .banner .page-center{
-        width:470px;
-        margin-right: auto;
-        margin-left: 50px;
+    .banner {
+        background-image: url(../img/feature-img.8a1cc66.jpg);
+        position: relative;
+        height: 483px;
+        .content,
+        .white-border{
+            position: absolute;
+            width: 630px;
+            height:523px;
+            margin-top: -40px;
+            padding-top: 40px;
+            clip-path: polygon(
+                0 0,
+                76% 0,
+                100% 51%,
+                75% 100%,
+                0 100%
+            );
+        }
+
+        .content{
+            background: $main-purple;
+            z-index: 1;
+        }
+
+        .white-border{
+            background: white;
+            z-index: 0;
+            margin-left: 10px;
+        }
+        .page-center{
+            width:470px;
+            height: 483px;
+            margin-right: auto;
+            margin-left: 50px;
+        }
     }
+    
+    
 
     .container{
         &:nth-child(odd){
