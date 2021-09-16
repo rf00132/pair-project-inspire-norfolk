@@ -149,18 +149,24 @@ body{
         background-position: center;
         background-size: cover;
         position: absolute;
+        margin-left: -10px;
         width: 100vw;
         height: 100%;
         top: 0;
     }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 603px;
+        .inner{
+            z-index: 1;
+        }
+    }
     .button{
-        background-color: $main-purple;
+        background-color: transparent;
         color: white;
         display: inline-block;   
-    }
-
-    .page-center{
-        padding-bottom: 80px;
     }
     
     h1,h2,h3{
@@ -477,6 +483,9 @@ body{
         padding-left: 30px;
         padding-right: 30px;
     }
+    .banner .background{
+        margin-left: -30px;
+    }
 }
 
 @media(min-width: 920px){
@@ -490,7 +499,7 @@ body{
         .background{
             background-image: url(../img/feature-img.8a1cc66.jpg);
             background-position: left center;
-            background-size: contain cover;
+            background-size: cover;
             margin-left: 150px;
         }
         .content,
@@ -501,7 +510,7 @@ body{
             clip-path: polygon(
                 0% 0%, 
                 62% 0%, 
-                100% 47%, 
+                100.1% 47%, 
                 58% 100%, 
                 0% 100%
             );
@@ -511,9 +520,6 @@ body{
             background: $main-purple;
             z-index: 1;
             position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
         .white-border{
@@ -617,19 +623,11 @@ body{
      .banner {
         .content,
         .white-border{
-            width: 580px;
-            clip-path: polygon(
-                0 0,
-                78% 0,
-                100% 50%,
-                83% 100%,
-                0 100%
-            );
+            width: 595px;
         }
 
         .content .inner{
             width: 500px;
-            padding-top: 30px;
         }
     }
 
