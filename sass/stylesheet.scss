@@ -191,15 +191,16 @@ body{
 
 .card{
     background-color: white;
-    flex-basis: 400px;
+    flex-basis: 350px;
     text-align: center;
     margin: 15px;
+    flex-grow: 1;
     a {
         text-decoration: none;
     }
     img{
         width: 100%;
-        height: 45%;
+        height: 200px;
         object-fit: cover;
     }
     h3{
@@ -210,24 +211,27 @@ body{
         color:$accent-black
     }
     i{
-        color: white;
-        font-size: 3rem;
-        background: #584096;
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
         position: absolute;
-        right: 50%;
-        left: 37%;
-        bottom: 85%;
+        top: 0;
+        left: 50%;
         &::before{
-            top: 24%;
+            top: -45px;
+            left: -45px;
             position: relative;
+            color: white;
+            font-size: 3rem;
+            background: #584096;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
         }
     }
     .card-text{
         position: relative;
-        padding: 35px;
+        padding: 40px 25px 10px;
     }
 
 }
@@ -455,9 +459,9 @@ body{
         }
     } 
 
-    .card{
-        flex-basis: 600px;
-    }
+    // .card{
+    //     flex-basis: 600px;
+    // }
 
     .page-center{
         padding-left: 30px;
@@ -549,9 +553,9 @@ body{
         width: $page-width;
     }
 
-    .card{
-        flex-basis: 250px;
-    }
+    // .card{
+    //     flex-basis: 250px;
+    // }
     
     .text-container{
         display: flex;
@@ -632,9 +636,9 @@ body{
         width: $page-width;
     }
 
-    .card{
-        flex-basis: 350px;
-    }
+    // .card{
+    //     flex-basis: 350px;
+    // }
 
     .header-page-nav{
         width: 750px;
