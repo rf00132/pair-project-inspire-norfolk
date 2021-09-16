@@ -5,7 +5,7 @@ $accent-black: #23224b;
 //site styles
 body{
     margin: 0px;
-    font-family: 'Urbanist', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: $accent-black;
     overflow: hidden;
     font-size: 1.2em;
@@ -21,6 +21,9 @@ body{
     height: fit-content;
     text-align: center;
     width: 230px;
+    margin-block-start: 9px;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .list{
@@ -116,7 +119,7 @@ body{
 .container{
     padding-top: 40px;
     padding-bottom: 40px;
-    &:nth-child(2n+3){
+    &:nth-child(odd){
         background-color: $main-purple;
         color: white;
     }
@@ -137,26 +140,33 @@ body{
 .banner{
     color: white;
     position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: fit-content;
     .background{
         background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
         url(../img/feature-img.8a1cc66.jpg);
         background-position: center;
         background-size: cover;
         position: absolute;
+        margin-left: -10px;
         width: 100vw;
         height: 100%;
         top: 0;
-        z-index: -1;
-        margin-left: -30px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 603px;
+        .inner{
+            z-index: 1;
+        }
     }
     .button{
-        background-color: #584096;
+        background-color: transparent;
         color: white;
         display: inline-block;   
-    }
-
-    .page-center{
-        padding-bottom: 80px;
     }
     
     h1,h2,h3{
@@ -164,12 +174,18 @@ body{
     }
     h1{
         font-size: 2.7em; 
+        margin-block-start: 0em;
+        margin-block-end: -0.33em;
     }
     h2{
         font-weight: 300;
     }
     h3{
-        font-weight: 600;
+        font-weight: 500;
+    }
+    p{
+        font-weight: 300;
+        width: 90%;
     }
 }
 
@@ -448,7 +464,7 @@ body{
     label{
         margin-bottom: 5px;
     }
-    
+
     .gdpr-container{
         font-size: 0.7em;
         margin-bottom: 20px;
@@ -475,6 +491,9 @@ body{
         padding-left: 30px;
         padding-right: 30px;
     }
+    .banner .background{
+        margin-left: -30px;
+    }
 }
 
 @media(min-width: 920px){
@@ -488,23 +507,20 @@ body{
         .background{
             background-image: url(../img/feature-img.8a1cc66.jpg);
             background-position: left center;
-            background-size: contain cover;
+            background-size: cover;
             margin-left: 150px;
         }
-        height: 563px;
         .content,
         .white-border{
             position: absolute;
-            width: 430px;
+            width: 553px;
             height:603px;
-            margin-top: -40px;
-            padding-top: 40px;
             clip-path: polygon(
-                0 0,
-                70% 0,
-                100% 50%,
-                75% 100%,
-                0 100%
+                0% 0%, 
+                62% 0%, 
+                100.1% 47%, 
+                58% 100%, 
+                0% 100%
             );
         }
 
@@ -512,18 +528,17 @@ body{
             background: $main-purple;
             z-index: 1;
             position: relative;
-
         }
 
         .white-border{
             background: white;
             z-index: 0;
-            margin-left: 10px;
+            margin-left: 5px;
             margin-top: 0;
         }
         .content .inner{
-            width:370px;
-            height: 483px;
+            width:437px;
+            height: max-content;
             margin-right: auto;
             
         }
@@ -620,19 +635,11 @@ body{
      .banner {
         .content,
         .white-border{
-            width: 580px;
-            clip-path: polygon(
-                0 0,
-                78% 0,
-                100% 50%,
-                83% 100%,
-                0 100%
-            );
+            width: 595px;
         }
 
         .content .inner{
             width: 500px;
-            padding-top: 30px;
         }
     }
 
