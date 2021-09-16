@@ -125,11 +125,15 @@ body {
   height: 100%;
   top: 0;
   z-index: -1;
+  margin-left: -30px;
 }
 .banner .button {
   background-color: #584096;
   color: white;
-  position: absolute;
+  display: inline-block;
+}
+.banner .page-center {
+  padding-bottom: 80px;
 }
 .banner h1, .banner h2, .banner h3 {
   text-transform: uppercase;
@@ -353,26 +357,31 @@ body {
 @media (min-width: 920px) {
   .banner {
     position: relative;
-    height: 483px;
+    height: 563px;
+  }
+  .banner .page-center {
+    padding-bottom: 0;
   }
   .banner .background {
     background-image: url(../img/feature-img.8a1cc66.jpg);
+    background-position: left center;
+    background-size: contain cover;
+    margin-left: 150px;
   }
   .banner .content,
 .banner .white-border {
     position: absolute;
-    width: 630px;
-    height: 523px;
+    width: 430px;
+    height: 603px;
     margin-top: -40px;
     padding-top: 40px;
-    -webkit-clip-path: polygon(0 0, 76% 0, 100% 51%, 75% 100%, 0 100%);
-            clip-path: polygon(0 0, 76% 0, 100% 51%, 75% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 70% 0, 100% 50%, 75% 100%, 0 100%);
+            clip-path: polygon(0 0, 70% 0, 100% 50%, 75% 100%, 0 100%);
   }
   .banner .content {
     background: #584096;
     z-index: 1;
     position: relative;
-    overflow-x: auto;
   }
   .banner .white-border {
     background: white;
@@ -381,8 +390,13 @@ body {
     margin-top: 0;
   }
   .banner .content .inner {
-    width: 470px;
+    width: 370px;
     height: 483px;
+    margin-right: auto;
+  }
+  .banner .inner-cntr {
+    position: relative;
+    margin-left: auto;
     margin-right: auto;
   }
   .banner .purple-block {
@@ -390,7 +404,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    left: -100%;
+    left: calc(30px - 100%);
     top: 0;
     z-index: 1000;
   }
@@ -399,7 +413,8 @@ body {
     text-align: left;
   }
 
-  .page-center {
+  .page-center,
+.container .inner-cntr {
     width: 870px;
   }
 
@@ -436,11 +451,23 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .banner .content,
+.banner .white-border {
+    width: 580px;
+    -webkit-clip-path: polygon(0 0, 78% 0, 100% 50%, 83% 100%, 0 100%);
+            clip-path: polygon(0 0, 78% 0, 100% 50%, 83% 100%, 0 100%);
+  }
+  .banner .content .inner {
+    width: 500px;
+    padding-top: 30px;
+  }
+
   .text-container p {
     width: 950px;
   }
 
-  .page-center {
+  .page-center,
+.container .inner-cntr {
     width: 1150px;
   }
 

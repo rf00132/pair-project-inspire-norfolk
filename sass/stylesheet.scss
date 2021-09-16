@@ -144,11 +144,16 @@ body{
         height: 100%;
         top: 0;
         z-index: -1;
+        margin-left: -30px;
     }
     .button{
         background-color: #584096;
         color: white;
-        position: absolute; //fix me!!! i dont have the right width but i do when im absolute???
+        display: inline-block;   
+    }
+
+    .page-center{
+        padding-bottom: 80px;
     }
     
     h1,h2,h3{
@@ -408,24 +413,31 @@ body{
 }
 
 @media(min-width: 920px){
+    $page-width: 870px;
 
     .banner {
         position: relative;
+        .page-center{
+            padding-bottom: 0;
+        }
         .background{
             background-image: url(../img/feature-img.8a1cc66.jpg);
+            background-position: left center;
+            background-size: contain cover;
+            margin-left: 150px;
         }
-        height: 483px;
+        height: 563px;
         .content,
         .white-border{
             position: absolute;
-            width: 630px;
-            height:523px;
+            width: 430px;
+            height:603px;
             margin-top: -40px;
             padding-top: 40px;
             clip-path: polygon(
                 0 0,
-                76% 0,
-                100% 51%,
+                70% 0,
+                100% 50%,
                 75% 100%,
                 0 100%
             );
@@ -435,7 +447,7 @@ body{
             background: $main-purple;
             z-index: 1;
             position: relative;
-            overflow-x: auto;
+
         }
 
         .white-border{
@@ -445,18 +457,23 @@ body{
             margin-top: 0;
         }
         .content .inner{
-            width:470px;
+            width:370px;
             height: 483px;
             margin-right: auto;
             
         }
 
+        .inner-cntr{
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .purple-block{
             background: $main-purple;
             position: absolute;
             height: 100%;
             width: 100%;
-            left: -100%;
+            left: calc(30px - 100%);
             top: 0;
             z-index: 1000;
         }
@@ -474,8 +491,9 @@ body{
     //     }
     // }
 
-    .page-center{
-        width: 870px;
+    .page-center,
+    .container .inner-cntr{
+        width: $page-width;
     }
 
     .card{
@@ -518,6 +536,32 @@ body{
 }
 
 @media(min-width: 1200px){
+    $page-width: 1150px;
+
+
+     .banner {
+
+
+        .content,
+        .white-border{
+            width: 580px;
+            clip-path: polygon(
+                0 0,
+                78% 0,
+                100% 50%,
+                83% 100%,
+                0 100%
+            );
+        }
+
+        .content .inner{
+            width: 500px;
+            padding-top: 30px;
+        }
+
+
+    }
+
     .text-container{
         p{
             // margin-left: 30px;
@@ -525,8 +569,9 @@ body{
         }
     }
 
-    .page-center{
-        width: 1150px;
+    .page-center,
+    .container .inner-cntr{
+        width: $page-width;
     }
 
     .card{
