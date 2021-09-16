@@ -113,7 +113,7 @@ body{
 .container{
     padding-top: 40px;
     padding-bottom: 40px;
-    &:nth-child(odd){
+    &:nth-child(2n+3){
         background-color: $main-purple;
         color: white;
     }
@@ -128,6 +128,8 @@ body{
         }
     }
 }
+
+
 
 .banner{
     color: white;
@@ -408,8 +410,10 @@ body{
 @media(min-width: 920px){
 
     .banner {
-        background-image: url(../img/feature-img.8a1cc66.jpg);
         position: relative;
+        .background{
+            background-image: url(../img/feature-img.8a1cc66.jpg);
+        }
         height: 483px;
         .content,
         .white-border{
@@ -430,22 +434,37 @@ body{
         .content{
             background: $main-purple;
             z-index: 1;
+            position: relative;
+            overflow-x: auto;
         }
 
         .white-border{
             background: white;
             z-index: 0;
             margin-left: 10px;
+            margin-top: 0;
         }
-        .page-center{
+        .content .inner{
             width:470px;
             height: 483px;
             margin-right: auto;
-            margin-left: 50px;
+            
+        }
+
+        .purple-block{
+            background: $main-purple;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            z-index: 1000;
         }
     }
     
-    
+    .left-align{
+        text-align: left;
+    }
 
     // .container{
     //     &:nth-child(odd){
@@ -469,7 +488,7 @@ body{
         
 
         h2{
-            width: 200px;
+            width: 250px;
         }
         p{
             width: 640px;
