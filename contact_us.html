@@ -12,6 +12,8 @@
         <!-- <link href="fonts/awsome-fonts/css/all.css" rel="stylesheet"> -->
         <script src="https://kit.fontawesome.com/352c99e409.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     </head>
     
     <body>
@@ -26,7 +28,7 @@
                     </div>
                     <div class="container">
                         <div class="page-center details">
-                            <div class="contact-details left-align">
+                            <div class="contact-details">
                                 <h1>Contact Us</h1>
                                 <ul class="list">
                                     <li>Inspire Norfolk</li>
@@ -34,13 +36,10 @@
                                     <li>01603 670909</li>
                                 </ul>
                             </div>
-                            <div class="contact-details left-align">
-                                <h1>Me When The</h1>
-                                <ul class="list">
-                                    <li>Me when the when the the me when the</li>
-                                    <li>Me when the me me when when the the me the when me when the me when the</li>
-                                    <li>Me when the when me me the when when me me when the the when me when the the me when when me when the when me me when me the the when me when</li>
-                                </ul>
+                            <div class="contact-details">
+                                <h1>Come See Us</h1>
+                                <div id="leafletjs-map"></div>
+                                <script src="js/initMap.js"></script>
                             </div>
                         </div>
                     </div>
@@ -57,16 +56,20 @@
                                         <label for="email-input" class="required-field">Email Address</label>
                                         <input id="email-input" type="text" class="form-input">
                                     </div>
-
                                     <div class="form-subsection">
                                         <label for="number-input" class="required-field">Phone Number</label>
                                         <input id="number-input" type="text" class="form-input">
                                     </div>
+                                    
                                 </div>
                                 <div class="form-section">
                                     <div class="form-subsection">
                                         <label for="message-input" class="required-field">Message</label>
                                         <textarea id="message-input" class="form-input"></textarea>
+                                    </div>
+                                    <div class="gdpr-container">
+                                        <input id="gdpr-checkbox" type="checkbox">
+                                        <label for="gdpr-checkbox" class="required-field">I have read and agree to the Inspire Norfolk <a href="#">Privacy Policy & Terms of Service</a>.</label>
                                     </div>
                                     <button id="form-submit-button" class="button" type="submit">Send</button>  
                                 </div>

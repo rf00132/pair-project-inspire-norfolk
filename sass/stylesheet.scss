@@ -449,6 +449,14 @@ body{
         margin-bottom: 5px;
     }
     
+    .gdpr-container{
+        font-size: 0.7em;
+        margin-bottom: 20px;
+    }
+}
+
+#leafletjs-map{
+    height: 300px;
 }
 
 @media(min-width: 650px){
@@ -591,7 +599,7 @@ body{
     } 
 
     .contact-form{
-        margin-right: 60px;
+        
         flex-direction: row;
         justify-content: space-between;
     }
@@ -599,6 +607,10 @@ body{
     .form-subsection{
         width: calc(#{$page-width}/2 - 60px)
         
+    }
+
+    .gdpr-container{
+        width: 400px;
     }
 }
 
@@ -645,7 +657,6 @@ body{
     }
 
     .form-subsection{
-        width: calc(#{$page-width}/2 - 60px)
-        
+        width: calc(#{$page-width}/2 - 60px);
     }
 }
