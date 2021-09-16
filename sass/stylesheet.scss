@@ -23,7 +23,10 @@ body{
     width: 230px;
 }
 
-
+.list{
+    list-style: none;
+    padding-left: 0;
+}
 
 //header styles
 
@@ -392,7 +395,57 @@ body{
 }
 
 
+//contact us page styles
 
+#contact-page{
+    .banner{
+        background-image: url(../img/contact_banner_image.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 150px;
+    }
+
+    .details{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        div{
+            flex-basis:435px;
+        }
+    }
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    input, textarea{
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        color:$accent-black;
+    }
+
+    .button{
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .form-section,
+    .form-subsection{
+        display: flex;
+        flex-direction: column;
+    }
+
+    textarea{
+        height: 130px;
+    }
+    label{
+        margin-bottom: 5px;
+    }
+    
+}
 
 @media(min-width: 650px){
     #footer{
@@ -533,15 +586,22 @@ body{
         }
     } 
 
+    .contact-form{
+        margin-right: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-subsection{
+        width: calc(#{$page-width}/2 - 60px)
+        
+    }
 }
 
 @media(min-width: 1200px){
     $page-width: 1150px;
 
-
      .banner {
-
-
         .content,
         .white-border{
             width: 580px;
@@ -558,8 +618,6 @@ body{
             width: 500px;
             padding-top: 30px;
         }
-
-
     }
 
     .text-container{
@@ -580,5 +638,10 @@ body{
 
     .header-page-nav{
         width: 750px;
+    }
+
+    .form-subsection{
+        width: calc(#{$page-width}/2 - 60px)
+        
     }
 }
