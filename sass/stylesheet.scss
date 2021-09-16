@@ -1,6 +1,7 @@
 //scss variables
 $main-purple: #584096;
-$accent-black: #23224b;
+$accent-black: #0E1623;
+$grey: #72727a;
 
 //site styles
 body{
@@ -15,13 +16,15 @@ body{
     background-color: white;
     border: white solid 2px;
     text-decoration: none;
-    color: #584096;
+    color: $main-purple;
     border-radius: 8px;
     padding: 8px;
     height: fit-content;
     text-align: center;
     width: 230px;
-    margin-block-start: 9px;
+    flex-basis: 330px;
+    display: inline-block;
+    margin-block-start: 1em;
     font-size: 1.5rem;
     font-weight: 300;
 }
@@ -117,8 +120,12 @@ body{
 }
 
 .container{
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    &.small{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
     &:nth-child(odd){
         background-color: $main-purple;
         color: white;
@@ -128,9 +135,10 @@ body{
         background-color:white;
         h3{
             color:$main-purple;
+            font-weight: 800;
         }
         p{
-            color: $accent-black;
+            color: $grey;
         }
     }
 }
@@ -165,8 +173,7 @@ body{
     }
     .button{
         background-color: transparent;
-        color: white;
-        display: inline-block;   
+        color: white;  
     }
     
     h1,h2,h3{
@@ -191,25 +198,30 @@ body{
 
 
 .text-container{
-    margin: -15px;
     text-align: left;
-    >*{
-        margin: 15px
+    // >*{
+    //     margin-block-start: 5px;
+    // }
+    h1{
+        font-weight: 500;
+    }
+    p{
+        font-weight: 300;
     }
 }
 
 .card-container{
     display: flex;
-    margin: -15px;
     flex-wrap: wrap;
+    gap:30px;
     justify-content: space-evenly;
+    margin-block-end: 30px;
 }
 
 .card{
     background-color: white;
     flex-basis: 350px;
     text-align: center;
-    margin: 15px;
     flex-grow: 1;
     a {
         text-decoration: none;
@@ -236,7 +248,7 @@ body{
             position: relative;
             color: white;
             font-size: 3rem;
-            background: #584096;
+            background: $main-purple;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -583,21 +595,17 @@ body{
     .text-container{
         display: flex;
         justify-content: space-between;
-        
+        gap:30px;
 
-        h2{
-            width: 250px;
+        h1{
+            flex-basis: 250px;
+            margin-block-start: 0.45em;
         }
         p{
-            width: 640px;
+            flex-basis: 640px;
         }
     }
 
-    .card-container{
-        justify-content: space-between;
-    }
-
-    
     .header-burger-button{
         display: none;
     }
@@ -646,7 +654,7 @@ body{
     .text-container{
         p{
             // margin-left: 30px;
-            width: 950px;
+            flex-basis: 950px;
         }
     }
 
