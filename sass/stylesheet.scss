@@ -9,7 +9,7 @@ body{
     font-family: 'Lato', sans-serif;
     color: $accent-black;
     overflow: hidden;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .button{
@@ -205,6 +205,9 @@ h3{font-weight: 800;}
     // }
     h1{
         font-weight: 500;
+    }
+    hr{
+        margin-right: 30%;
     }
     p{
         font-weight: 300;
@@ -578,7 +581,7 @@ h3{font-weight: 800;}
 }
 
 @media(min-width: 920px){
-    $page-width: 870px;
+    $page-width: 840px;
 
     .banner {
         position: relative;
@@ -696,13 +699,9 @@ h3{font-weight: 800;}
         justify-content: space-between;
     }
 
-    .form-subsection{
+    .form-subsection, .gdpr-container{
         width: calc(#{$page-width}/2 - 60px)
         
-    }
-
-    .gdpr-container{
-        width: 400px;
     }
 
     #services{
@@ -750,7 +749,7 @@ h3{font-weight: 800;}
 }
 
 @media(min-width: 1200px){
-    $page-width: 1150px;
+    $page-width: 1120px;
 
     .text-container{
         p{
