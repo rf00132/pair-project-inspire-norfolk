@@ -513,6 +513,45 @@ body{
     }
 }
 
+//about us styles
+
+#about-us{
+    .banner{
+        background-image: url(../img/about_banner_image.jpg);
+        height: 500px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    ul{
+        padding-left: 0;
+        list-style: none;
+    }
+}
+
+//testimonials styles
+
+#testimonials{
+    .avatar{
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    .testimony{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .container{
+        &:nth-child(odd){
+            .page-center{
+                flex-direction: row-reverse;
+            }
+        }
+    }
+
+
+}
 @media(min-width: 650px){
     #footer{
         .main-content{
@@ -672,6 +711,38 @@ body{
             text-align: left;
         }
     }
+
+    #about-us{
+        .page-center{
+            text-align: left;
+        }
+    }
+
+    #testimonials{
+        .page-center{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .text{
+            width: 500px;
+        }
+
+        .container{
+            
+            &:nth-child(odd){
+                .name-picture{
+                    margin-left: 80px;
+                }
+            }
+
+            &:nth-child(even){
+                .name-picture{
+                    margin-right: 80px;
+                }
+            }
+        }
+    }
 }
 
 @media(min-width: 1200px){
@@ -699,5 +770,11 @@ body{
 
     .form-subsection{
         width: calc(#{$page-width}/2 - 60px);
+    }
+
+    #testimonials{
+        .text{
+            width: 700px;
+        }
     }
 }

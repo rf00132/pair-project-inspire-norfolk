@@ -40,7 +40,14 @@ function ValidateForm(event){
 }
 
 function SubmitForm(){
-
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH', 
+        {action: 'send_message'}).then(function(token) {
+            $('.contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+            $('.contact-form').prepend('<input type="hidden" name="action" value="send_message">');
+            $('.contact-form').unbind('submit').submit();
+        });;
+    });
 }
 
 function SetLabelsInvalid(){
