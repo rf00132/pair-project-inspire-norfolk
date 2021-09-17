@@ -17,8 +17,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-  width: 230px;
-  flex-basis: 330px;
+  min-width: 230px;
   display: inline-block;
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
@@ -123,10 +122,13 @@ body {
 .container:nth-child(even) h3,
 .container:nth-child(even) h1 {
   color: #584096;
-  font-weight: 800;
 }
 .container:nth-child(even) p {
   color: #72727a;
+}
+
+h3 {
+  font-weight: 800;
 }
 
 .banner {
@@ -153,7 +155,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 603px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .banner .content .inner {
   z-index: 1;
@@ -386,7 +389,7 @@ body {
   background-image: url(../img/contact_banner_image.jpg);
   background-size: cover;
   background-position: center;
-  height: 150px;
+  height: 300px;
 }
 #contact-page .details {
   display: flex;
@@ -403,15 +406,17 @@ body {
   text-align: left;
 }
 .contact-form input, .contact-form textarea {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   padding: 10px 20px;
   border-radius: 5px;
-  border: none;
+  border: #584096 solid 3px;
   color: #0E1623;
 }
 .contact-form .button {
   margin-left: auto;
   margin-right: 0;
+  border: #584096 solid 3px;
 }
 .contact-form .form-section,
 .contact-form .form-subsection {
@@ -422,11 +427,17 @@ body {
   height: 130px;
 }
 .contact-form label {
-  margin-bottom: 5px;
+  margin-top: 10px;
+  font-weight: 700;
+  color: #584096;
+}
+.contact-form label a {
+  color: #584096;
 }
 .contact-form .gdpr-container {
   font-size: 0.7em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 #leafletjs-map {
@@ -434,7 +445,7 @@ body {
 }
 
 #services .banner {
-  background-image: url(../img/skyline.jpg);
+  background-image: URL("../img/skyline.jpg");
   height: 500px;
   background-position: bottom;
   background-size: cover;
@@ -505,7 +516,7 @@ body {
 .banner .white-border {
     position: absolute;
     width: 553px;
-    height: 603px;
+    height: 100%;
     -webkit-clip-path: polygon(0% 0%, 62% 0%, 100.1% 47%, 58% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 62% 0%, 100.1% 47%, 58% 100%, 0% 100%);
   }
@@ -553,7 +564,7 @@ body {
 
   .text-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 30px;
   }
   .text-container h1 {
