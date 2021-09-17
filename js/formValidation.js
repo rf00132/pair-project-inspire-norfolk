@@ -12,6 +12,8 @@ const emailRegex = /^\S+@\S+\.\S+$/;
 const numberRegex = /^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/;
 
 const originalGdprText = formLabels[4].innerHTML;
+const originalTextColour = "#584096";
+
 
 let validName;
 let validEmail;
@@ -26,7 +28,6 @@ function ValidateForm(event){
     validNumber = numberRegex.test(numberInput.value);
     validMessage = (messageInput.value.length >= 1);
     checkedGdprBox = gdprCheckbox.checked;
-    console.log(gdprCheckbox.checked);
 
     if(validName && validEmail && validNumber && validMessage && checkedGdprBox){
         SubmitForm();
@@ -40,14 +41,7 @@ function ValidateForm(event){
 }
 
 function SubmitForm(){
-    grecaptcha.ready(function() {
-        grecaptcha.execute('6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH', 
-        {action: 'send_message'}).then(function(token) {
-            $('.contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
-            $('.contact-form').prepend('<input type="hidden" name="action" value="send_message">');
-            $('.contact-form').unbind('submit').submit();
-        });;
-    });
+
 }
 
 function SetLabelsInvalid(){
@@ -85,7 +79,7 @@ function SetLabelsValid(){
     formLabels[4].innerHTML = originalGdprText;
 
     for (let i = 0; i< formLabels.length; i++){
-        formLabels[i].style.color = "white";
+        formLabels[i].style.color = originalTextColour;
     }
 }
 
