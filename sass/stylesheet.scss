@@ -133,7 +133,8 @@ body{
 
     &:nth-child(even){
         background-color:white;
-        h3{
+        h3,
+        h1{
             color:$main-purple;
             font-weight: 800;
         }
@@ -151,6 +152,7 @@ body{
     padding-top: 0;
     padding-bottom: 0;
     height: fit-content;
+    background-position: center;
     .background{
         background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
         url(../img/feature-img.8a1cc66.jpg);
@@ -448,6 +450,7 @@ body{
     }
 }
 
+
 .contact-form{
     display: flex;
     flex-direction: column;
@@ -486,6 +489,28 @@ body{
 
 #leafletjs-map{
     height: 300px;
+}
+
+//services styles
+
+#services{
+    .banner{
+        background-image: URL(../img/skyline.jpg);
+        height: 500px;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    .image{
+        display: none;
+        height: 200px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .page-center{
+        display: flex;
+    }
 }
 
 @media(min-width: 650px){
@@ -635,6 +660,17 @@ body{
 
     .gdpr-container{
         width: 400px;
+    }
+
+    #services{
+        .image{
+            display: block;
+            margin-right: 20px;
+            margin-top: 30px;
+        }
+        .page-center{
+            text-align: left;
+        }
     }
 }
 
