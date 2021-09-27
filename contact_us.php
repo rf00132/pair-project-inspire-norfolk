@@ -32,26 +32,26 @@
                         <div class="page-center left-align">
                             <h1>Contact Us</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                            <form class="contact-form">
+                            <form class="contact-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                                 <div class="form-section">
                                     <div class="form-subsection">
                                         <label for="name-input" class="required-field">Full Name</label>
-                                        <input id="name-input" type="text" class="form-input">
+                                        <input name="name" id="name-input" type="text" class="form-input">
                                     </div>
                                     <div class="form-subsection">
                                         <label for="email-input" class="required-field">Email Address</label>
-                                        <input id="email-input" type="text" class="form-input">
+                                        <input name="email" id="email-input" type="text" class="form-input">
                                     </div>
                                     <div class="form-subsection">
                                         <label for="number-input" class="required-field">Phone Number</label>
-                                        <input id="number-input" type="text" class="form-input">
+                                        <input name="phone" id="number-input" type="text" class="form-input">
                                     </div>
                                     
                                 </div>
                                 <div class="form-section">
                                     <div class="form-subsection">
                                         <label for="message-input" class="required-field">Message</label>
-                                        <textarea id="message-input" class="form-input"></textarea>
+                                        <textarea name="message" id="message-input" class="form-input"></textarea>
                                     </div>
                                     <div class="gdpr-container">
                                         <input id="gdpr-checkbox" type="checkbox">
@@ -63,9 +63,9 @@
                                     data-callback='onSubmit' 
                                     data-action='submit'>Send</button>  
                                 </div>
-                                
                             </form>
                             <script src="js/formValidation.js"></script>
+                            <?php include "php\contact-check.php"
                         </div>
                     </div>
                     <div class="container">
