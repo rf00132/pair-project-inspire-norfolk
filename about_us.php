@@ -18,7 +18,7 @@
     <body>
         <div id="container">
             <div id="inner">
-                <?php include "header.html">
+                <?php include "header.html" ?>
                 <main id="about-us">
                     <div class="container banner">
                         <div class="page-center">
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                 </main>
-                <?php include "footer.html">
+                <?php include "footer.html" ?>
             </div>
         </div>
     </body>
