@@ -21,7 +21,7 @@
     <body>
         <div id="container">
             <div id="inner">
-                <!-- <?php include "header.html"> -->
+                <?php include "header.html">
                 <main id="contact-page">
                     <div class="container banner">
                         <div class="page-center">
@@ -86,7 +86,7 @@
                     </div>
                     
                 </main>
-                <!-- <?php include "footer.html"> -->
+                <?php include "footer.html">
             </div>
         </div>
         <script src="js/recaptcha.js"></script>
