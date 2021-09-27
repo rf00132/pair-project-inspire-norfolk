@@ -15,13 +15,13 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH"></script>
     </head>
     
     <body>
         <div id="container">
             <div id="inner">
-                
+                <!-- <?php include "header.html"> -->
                 <main id="contact-page">
                     <div class="container banner">
                         <div class="page-center">
@@ -59,7 +59,7 @@
                                     </div>
                                     <button id="form-submit-button" 
                                     class="button g-recaptcha" 
-                                    data-sitekey="render=6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH" 
+                                    data-sitekey="6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH" 
                                     data-callback='onSubmit' 
                                     data-action='submit'>Send</button>  
                                 </div>
@@ -86,6 +86,7 @@
                     </div>
                     
                 </main>
+                <!-- <?php include "footer.html"> -->
             </div>
         </div>
         <script src="js/recaptcha.js"></script>
