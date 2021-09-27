@@ -57,11 +57,14 @@
                                         <input id="gdpr-checkbox" type="checkbox">
                                         <label for="gdpr-checkbox" class="required-field">I have read and agree to the Inspire Norfolk <a href="privacy_terms.php">Privacy Policy & Terms of Service</a>.</label>
                                     </div>
-                                    <button id="form-submit-button" 
+                                    <input 
+                                    type="submit"
+                                    value="Send" 
+                                    id="form-submit-button" 
                                     class="button g-recaptcha" 
                                     data-sitekey="6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH" 
                                     data-callback='onSubmit' 
-                                    data-action='submit'>Send</button>  
+                                    data-action='submit'>
                                 </div>
                             </form>
                             <script src="js/formValidation.js"></script>
