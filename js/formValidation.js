@@ -22,7 +22,6 @@ let validMessage;
 let checkedGdprBox;
 
 function ValidateForm(event){
-    event.preventDefault();
     validName = nameRegex.test(nameInput.value);
     validEmail = emailRegex.test(emailInput.value);
     validNumber = numberRegex.test(numberInput.value);
@@ -30,19 +29,18 @@ function ValidateForm(event){
     checkedGdprBox = gdprCheckbox.checked;
 
     if(validName && validEmail && validNumber && validMessage && checkedGdprBox){
-        SubmitForm();
         SetLabelsValid();
+        console.log("happy happy form")
     }
     else{
+        event.preventDefault();
+        console.log("very unhappy form")
         SetLabelsValid();
         SetLabelsInvalid();
     }
-    
 }
 
-function SubmitForm(){
 
-}
 
 function SetLabelsInvalid(){
     if(!validName){
