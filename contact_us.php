@@ -9,13 +9,12 @@
         <link rel="shortcut icon" href="img/icons/favicon.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-        <!-- <link href="fonts/awsome-fonts/css/all.css" rel="stylesheet"> -->
         <script src="https://kit.fontawesome.com/352c99e409.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://www.google.com/recaptcha/api.js?6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH"></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
     </head>
     
     <body>
@@ -57,18 +56,12 @@
                                         <input id="gdpr-checkbox" type="checkbox">
                                         <label for="gdpr-checkbox" class="required-field">I have read and agree to the Inspire Norfolk <a href="privacy_terms.php">Privacy Policy & Terms of Service</a>.</label>
                                     </div>
-                                    <input 
-                                    type="submit"
-                                    value="Send" 
-                                    id="form-submit-button" 
-                                    class="button g-recaptcha" 
-                                    data-sitekey="6Lcgh3McAAAAAM33Hir9gvXu7k_n9Baol3PGigGH" 
-                                    data-callback='onSubmit' 
-                                    data-action='submit'>
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="6LeSZZ0cAAAAAGCWrZOlAlvSMUCPda4TWEgHDLca"></div>
+                                <input type="submit" value="Send" id="form-submit-button" class="button">
                             </form>
                             <script src="js/formValidation.js"></script>
-                            <?php include "php\contact-check.php" ?>
+                            <?php include "php/contact-check.php" ?>
                         </div>
                     </div>
                     <div class="container">
@@ -92,6 +85,6 @@
                 <?php include "footer.html"?>
             </div>
         </div>
-        <script src="js/recaptcha.js"></script>
+
     </body>
 </html>
