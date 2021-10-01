@@ -115,20 +115,7 @@
                 }
             }
         
-            try{
-                $responses = $db->query('SELECT * FROM responses');
-                $statement = $responses->fetchAll();
-            }
-            catch (exception $e) {
-                echo $e->getMessage();
-            } 
-
-            echo '<p> Number of responses:';
-            if(!empty($statement)) echo count($statement); 
-            echo'</p>';
-
-            // Paste mail function or whatever else you want to happen here!
-            echo '<br><p>CAPTCHA was completed successfully!</p><br>';
+            echo '<b>Form Submitted</b>';
         }
     }
 
